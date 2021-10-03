@@ -32,7 +32,7 @@ class ConvAngularPen(nn.Module):
         return L
     
     def getLoss(self):
-        return adms_loss
+        return self.adms_loss
 
 class ConvNet(nn.Module):
 
