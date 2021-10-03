@@ -35,12 +35,12 @@ python train_fMNIST.py --num-epochs 40 --seed 1234 --use-cuda
 
 
 ``
-python train_MsMalware.py --batch-size=128 --num-epochs 40 --seed 1234
+python train_MsMalware.py --batch-size=128 --num-epochs 40 --seed 1234 --use-cuda
 ``
 
 
 ``
-python train_MsMalware_margin_loss.py --batch-size=128 --num-epochs 40 --seed 1234
+python train_MsMalware_margin_loss.py --batch-size=128 --num-epochs 40 --seed 1234 --use-cuda
 ``
 
 Which produces the following results:
