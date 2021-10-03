@@ -20,11 +20,15 @@ def plot(embeds, labels, fig_path='./example.pdf'):
     z = r*cos(phi)
     ax.plot_surface(
         x, y, z,  rstride=1, cstride=1, color='w', alpha=0.3, linewidth=0)
-    ax.scatter(embeds[:,0], embeds[:,1], embeds[:,2], c=labels, s=20)
-
+    # ax.scatter(embeds[:,0], embeds[:,1], embeds[:,2], c=labels, s=20)
+    scatters=ax.scatter(embeds[:,0], embeds[:,1], embeds[:,2], c=labels,cmap=plt.cm.get_cmap('rainbow', 9), s=20)
     ax.set_xlim([-1, 1])
     ax.set_ylim([-1, 1])
     ax.set_zlim([-1, 1])
-    ax.set_aspect("equal")
+
+    legend1 = ax.legend(*scatters.legend_elements(),loc="upper right")
+    ax.add_artist(legend1)
+
+    # ax.set_aspect("equal")
     plt.tight_layout()
     plt.savefig(fig_path)
